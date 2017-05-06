@@ -15,12 +15,15 @@ class ViewController: UIViewController ,FBSDKLoginButtonDelegate{
 @IBOutlet weak var loginButton: FBSDKLoginButton!
     override func viewDidLoad() {
         let loginButton = FBSDKLoginButton()
-        // Optional: Place the button in the center of your view.
+        
         loginButton.center = view.center
         view.addSubview(loginButton)
         loginButton.readPermissions = ["public_profile", "email", "user_friends"]
     }
 
+    @IBAction func buttonKu(_ sender: UIButton) {
+        performSegue(withIdentifier: "a", sender: nil)
+    }
     
     
     override func didReceiveMemoryWarning() {

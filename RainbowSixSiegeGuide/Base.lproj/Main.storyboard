@@ -28,12 +28,20 @@
                                 <color key="textColor" red="0.85857128793008497" green="0.95381067154255317" blue="0.48803949066672064" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.95381067154255317" green="0.32047795983105448" blue="0.64674207453779253" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggw-JU-TGE">
+                                <rect key="frame" x="172" y="563" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonKu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EPv-xO-flT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3936983905942541" green="0.37227058909185495" blue="0.40802651263297873" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="o5o-Jb-Wrd"/>
                     <connections>
-                        <segue destination="iPQ-Zi-J6s" kind="presentation" id="jCp-x0-Fg8"/>
+                        <segue destination="iPQ-Zi-J6s" kind="show" identifier="a" id="P7F-tD-DhY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -93,6 +101,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LPI-Cy-god"/>
                     <connections>
                         <outlet property="collectionView" destination="iXX-iU-aDc" id="TrE-EJ-Zd3"/>
                     </connections>
