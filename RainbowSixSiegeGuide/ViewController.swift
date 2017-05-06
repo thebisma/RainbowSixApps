@@ -28,16 +28,8 @@ class ViewController: UIViewController ,FBSDKLoginButtonDelegate{
         // Dispose of any resources that can be recreate   asawdawdawdawd.
     }
     
-    
-    @IBAction func buttonmenj(_ sender: Any) {
-        performSegue(withIdentifier: "segue1", sender: nil)
-    }
    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
-    }
-    
+        
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if (error != nil)
         
