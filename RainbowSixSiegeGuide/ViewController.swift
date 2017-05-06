@@ -21,7 +21,7 @@ class ViewController: UIViewController ,FBSDKLoginButtonDelegate{
         loginButton.readPermissions = ["public_profile", "email", "user_friends"]
     }
 
- 
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
