@@ -29,9 +29,10 @@ class ViewController: UIViewController ,FBSDKLoginButtonDelegate{
     }
     
     
-    @IBAction func buttonMenu(_ sender: Any) {
-        performSegue(withIdentifier: "segue1", sender: nil)
+    @IBAction func buttonmenj(_ sender: Any) {
+        performSegue(withIdentifier: "segue1", sender: <#T##Any?#>)
     }
+   
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     

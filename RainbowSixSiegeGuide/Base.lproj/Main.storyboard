@@ -36,6 +36,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pOz-Jv-a3j"/>
+                                    <action selector="buttonmenj:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cTm-Dg-ttd"/>
                                 </connections>
                             </button>
                         </subviews>
