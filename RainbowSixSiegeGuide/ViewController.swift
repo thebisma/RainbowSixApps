@@ -9,9 +9,18 @@
 import UIKit
 import FBSDKShareKit
 import FBSDKLoginKit
+
+
+
+
 class ViewController: UIViewController ,FBSDKLoginButtonDelegate{
 
 
+    @IBOutlet weak var myButton: UIButton!
+  
+    @IBAction func myButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "a", sender: nil)
+    }
 @IBOutlet weak var loginButton: FBSDKLoginButton!
     override func viewDidLoad() {
         let loginButton = FBSDKLoginButton()
@@ -21,9 +30,7 @@ class ViewController: UIViewController ,FBSDKLoginButtonDelegate{
         loginButton.readPermissions = ["public_profile", "email", "user_friends"]
     }
 
-    @IBAction func buttonKu(_ sender: UIButton) {
-        performSegue(withIdentifier: "a", sender: nil)
-    }
+   
     
     
     override func didReceiveMemoryWarning() {
@@ -39,7 +46,14 @@ class ViewController: UIViewController ,FBSDKLoginButtonDelegate{
         {
             print(error.localizedDescription)
         }
+        else
+        {
+         
+        }
+        
     }
+        
+    
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("Goodbye")
     }

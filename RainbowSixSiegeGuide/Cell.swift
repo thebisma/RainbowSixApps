@@ -2,7 +2,7 @@
 //  Cell.swift
 //  RainbowSixSiegeGuide
 //
-//  Created by iosdev on 5/6/17.
+//  Created by bisma on 5/6/17.
 //  Copyright © 2017 iosdev. All rights reserved.
 //
 
