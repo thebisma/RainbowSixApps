@@ -30,7 +30,7 @@ class ViewController: UIViewController ,FBSDKLoginButtonDelegate{
     
     
     @IBAction func buttonmenj(_ sender: Any) {
-        performSegue(withIdentifier: "segue1", sender: <#T##Any?#>)
+        performSegue(withIdentifier: "segue1", sender: nil)
     }
    
     
