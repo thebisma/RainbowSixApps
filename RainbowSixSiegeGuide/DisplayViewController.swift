@@ -34,5 +34,17 @@ class DisplayViewController: UIViewController,UICollectionViewDataSource,UIColle
         cell.myLabel.text = menu[indexPath.row]
         return cell
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch(indexPath.row){
+        case 2 :
+            performSegue(withIdentifier: "b", sender: self)
+            
+            
+        default:
+            break
+        }
+        
+    }
+    
 }
