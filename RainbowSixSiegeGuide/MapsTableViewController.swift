@@ -10,6 +10,8 @@ import UIKit
 
 class MapsTableViewController: UITableViewController {
 
+  
+    let data = ["Favela","Yacht"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,23 +31,24 @@ class MapsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return data.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FormMapsTableViewCell
+        let mapName = data[indexPath.row]
+        cell.mapLabel?.text = mapName
+        cell.mapImage?.image = UIImage (named:"favela.jpg")
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

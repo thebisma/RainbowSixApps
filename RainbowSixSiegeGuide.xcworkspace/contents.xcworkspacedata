@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:FormMapsTableViewCell.swift">
+   </FileRef>
+   <FileRef
       location = "group:RainbowSixSiegeGuide.xcodeproj">
    </FileRef>
    <FileRef
