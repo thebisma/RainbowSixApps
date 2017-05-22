@@ -37,6 +37,8 @@ class DisplayViewController: UIViewController,UICollectionViewDataSource,UIColle
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch(indexPath.row){
+        case 1 :
+            performSegue(withIdentifier: "a", sender: self)
         case 2 :
             performSegue(withIdentifier: "b", sender: self)
             
