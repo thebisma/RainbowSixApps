@@ -1,4 +1,4 @@
-//
+////
 //  ViewController.swift
 //  RainbowSixSiegeGuide
 //
@@ -10,7 +10,7 @@ import UIKit
 import FBSDKShareKit
 import FBSDKLoginKit
 //import FacebookCore
-import FacebookLogin
+//import FacebookLogin
 
 
 
