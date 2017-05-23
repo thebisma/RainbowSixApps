@@ -10,8 +10,8 @@ import UIKit
 
 class MapsTableViewController: UITableViewController {
 
-  
-    let data = ["Favela","Yacht"]
+    let image = ["Chalet.jpg","House.jpg","Plane.jpg"]
+    let data = ["Chalet","House","Plane"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,7 +36,7 @@ class MapsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return data.count
+        return min(data.count,image.count)
     }
 
     
@@ -44,8 +44,7 @@ class MapsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FormMapsTableViewCell
         let mapName = data[indexPath.row]
         cell.mapLabel?.text = mapName
-        cell.mapImage?.image = UIImage (named:"favela.jpg")
-        
+        cell.mapImage?.image = UIImage(named :image[indexPath.row])
         return cell
     }
     

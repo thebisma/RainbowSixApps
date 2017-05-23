@@ -137,15 +137,17 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Npy-5L-taU">
                                             <rect key="frame" x="0.0" y="261" width="42" height="21.5"/>
                                         </stackView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHz-Mt-cko">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHz-Mt-cko">
                                             <rect key="frame" x="-7" y="207" width="334" height="22"/>
+                                            <color key="tintColor" red="0.81231172192048506" green="0.81347150259067347" blue="0.75740151295169456" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <color key="textColor" red="0.81865284974093255" green="0.81865284974093255" blue="0.81865284974093255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="0.7409326424870466" green="0.7409326424870466" blue="0.7409326424870466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" red="0.45595854922279788" green="0.45595854922279788" blue="0.45595854922279788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Npy-5L-taU" secondAttribute="bottom" constant="24.5" id="UUa-P3-1Lx"/>
                                         <constraint firstItem="RHz-Mt-cko" firstAttribute="top" secondItem="51G-1A-paK" secondAttribute="top" constant="207" id="sCB-qh-N9M"/>
                                         <constraint firstItem="Npy-5L-taU" firstAttribute="top" secondItem="RHz-Mt-cko" secondAttribute="bottom" constant="32" id="sqP-cN-slt"/>
                                     </constraints>
@@ -178,7 +180,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" ambiguous="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5cJ-6E-MOJ">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5cJ-6E-MOJ">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
@@ -186,6 +188,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5cJ-6E-MOJ" firstAttribute="leading" secondItem="hjQ-bt-dAl" secondAttribute="leadingMargin" constant="-16" id="DTQ-T6-HdV"/>
+                            <constraint firstItem="5cJ-6E-MOJ" firstAttribute="leading" secondItem="hjQ-bt-dAl" secondAttribute="leading" id="LYP-um-uRt"/>
+                            <constraint firstItem="5cJ-6E-MOJ" firstAttribute="top" secondItem="emX-20-8Bn" secondAttribute="bottom" id="e4q-qO-wWi"/>
+                            <constraint firstItem="PuD-Rm-FEk" firstAttribute="top" secondItem="5cJ-6E-MOJ" secondAttribute="bottom" id="le3-g8-HT7"/>
+                            <constraint firstAttribute="trailing" secondItem="5cJ-6E-MOJ" secondAttribute="trailing" id="o9f-sk-o2J"/>
                             <constraint firstItem="5cJ-6E-MOJ" firstAttribute="top" secondItem="emX-20-8Bn" secondAttribute="bottom" id="ufh-xb-PA1"/>
                         </constraints>
                     </view>
