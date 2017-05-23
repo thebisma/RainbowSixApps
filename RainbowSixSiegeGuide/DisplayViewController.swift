@@ -11,7 +11,7 @@ import UIKit
 class DisplayViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate{
 
     @IBOutlet weak var collectionView: UICollectionView!
-    var menu = ["Character and Weapon","Map list","R6 Stat","Reminder","About"]
+    var menu = ["Army.jpg","Maps.jpg","r6.jpg","Reminder.jpg","About.jpg"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class DisplayViewController: UIViewController,UICollectionViewDataSource,UIColle
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Cell
-        cell.myLabel.text = menu[indexPath.row]
+        cell.imageView?.image = UIImage(named :menu[indexPath.row])
         return cell
     }
     

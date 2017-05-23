@@ -22,23 +22,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggw-JU-TGE">
-                                <rect key="frame" x="172" y="475" width="46" height="88"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbI-6H-k5f">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggw-JU-TGE">
+                                <rect key="frame" x="0.0" y="533" width="320" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="myButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bGv-oj-aLX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome To Rainbow 6 Siege Guide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vey-Ii-ARh">
-                                <rect key="frame" x="70" y="108" width="289" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Welcome To Rainbow 6 Siege Guide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vey-Ii-ARh">
+                                <rect key="frame" x="15" y="107" width="289" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.85857128793008497" green="0.95381067154255317" blue="0.48803949066672064" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.95381067154255317" green="0.32047795983105448" blue="0.64674207453779253" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.3936983905942541" green="0.37227058909185495" blue="0.40802651263297873" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ggw-JU-TGE" secondAttribute="bottom" constant="5" id="8f6-5a-l9s"/>
+                            <constraint firstItem="ggw-JU-TGE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NmG-oN-AMH"/>
+                            <constraint firstAttribute="trailing" secondItem="ggw-JU-TGE" secondAttribute="trailing" id="PRF-xY-FLg"/>
+                            <constraint firstItem="Vey-Ii-ARh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="akB-bG-ba4"/>
+                            <constraint firstAttribute="trailing" secondItem="Vey-Ii-ARh" secondAttribute="trailing" constant="16" id="zKW-hy-aIF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="o5o-Jb-Wrd"/>
                     <connections>
@@ -47,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="388" y="-581.55922038980509"/>
+            <point key="canvasLocation" x="386.25" y="-582.04225352112678"/>
         </scene>
         <!--Display View Controller-->
         <scene sceneID="uWl-iT-df3">
@@ -61,10 +70,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" indicatorStyle="black" minimumZoomScale="2" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iXX-iU-aDc">
-                                <rect key="frame" x="30" y="124" width="260" height="357"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <color key="backgroundColor" red="0.89713887965425532" green="0.19558711753728844" blue="0.25324599835790662" alpha="1" colorSpace="calibratedRGB"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" indicatorStyle="white" minimumZoomScale="2" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iXX-iU-aDc">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="0.9270445704460144" green="0.73739167281554396" blue="0.77648973806695631" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="YfA-S3-Cct">
                                     <size key="itemSize" width="80" height="70"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -79,18 +87,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHN-bL-gpY">
-                                                    <rect key="frame" x="29" y="40" width="42" height="21"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehX-s5-tZz">
+                                                    <rect key="frame" x="4" y="6" width="73" height="59"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.53589648810066726" green="0.46491068731091639" blue="0.95381067154255317" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="myLabel" destination="eHN-bL-gpY" id="N8d-in-ELT"/>
+                                            <outlet property="imageView" destination="ehX-s5-tZz" id="CbC-Yr-8eW"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -101,6 +106,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iXX-iU-aDc" firstAttribute="leading" secondItem="teO-3T-bUf" secondAttribute="leading" id="1zk-uy-8xZ"/>
+                            <constraint firstItem="iXX-iU-aDc" firstAttribute="top" secondItem="Qk4-8r-rpz" secondAttribute="bottom" id="P3P-zf-gKz"/>
+                            <constraint firstItem="fFv-HE-nH8" firstAttribute="top" secondItem="iXX-iU-aDc" secondAttribute="bottom" id="fEA-4v-VYn"/>
+                            <constraint firstAttribute="trailing" secondItem="iXX-iU-aDc" secondAttribute="trailing" id="rke-k4-pGl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LPI-Cy-god"/>
                     <connections>
@@ -111,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFD-8b-Wvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170" y="-582"/>
+            <point key="canvasLocation" x="1170" y="-582.04225352112678"/>
         </scene>
         <!--Maps Table View Controller-->
         <scene sceneID="N4h-tK-Cwq">
