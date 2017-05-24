@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 class WebviewViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
@@ -16,6 +16,7 @@ class WebviewViewController: UIViewController {
         let url = URL(string: "https://r6stats.com/")
         let request = URLRequest(url: url!)
         webView.loadRequest(request)
+        
         
     }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class DisplayViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate{
 
@@ -15,6 +16,7 @@ class DisplayViewController: UIViewController,UICollectionViewDataSource,UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
 
         // Do any additional setup after loading the view.
     }
@@ -37,10 +39,21 @@ class DisplayViewController: UIViewController,UICollectionViewDataSource,UIColle
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch(indexPath.row){
+        case 0 :
+            SVProgressHUD.show(withStatus: "Wait For it")
+            performSegue(withIdentifier: "c", sender: self)
+             SVProgressHUD.dismiss(withDelay: 1)
+           
         case 1 :
+            SVProgressHUD.show(withStatus: "Wait For it")
             performSegue(withIdentifier: "a", sender: self)
+            SVProgressHUD.dismiss(withDelay: 1)
         case 2 :
+            SVProgressHUD.show(withStatus: "Wait For it")
             performSegue(withIdentifier: "b", sender: self)
+             SVProgressHUD.dismiss(withDelay: 1)
+            
+            
             
             
         default:

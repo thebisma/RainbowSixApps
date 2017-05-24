@@ -7,19 +7,14 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 class MapsTableViewController: UITableViewController {
 
     let image = ["Bank.jpg","Chalet.jpg","Clubhouse.jpg","Consulate.jpg","Hereford.jpg","House.jpg","Cafe.jpg","Kanal.jpg","Oregon.jpg","Plane.jpg","Yacht.jpg","Border.jpg","Favela.jpg","Skyscraper.jpg","Bartlett.jpg","Coastline.jpg"]
     let data = ["Bank","Chalet","Club House","Consulate","Hereford Base","House","Kafe Dostoyevsky","Kanal","Oregon","Presidential Plane","Yacht","Border","Favela","SkyScraper","Bartlett University","Coastline"]
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+       
     }
 
     override func didReceiveMemoryWarning() {

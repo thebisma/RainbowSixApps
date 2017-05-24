@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKShareKit
 import FBSDKLoginKit
+import SVProgressHUD
 //import FacebookCore
 //import FacebookLogin
 
@@ -21,7 +22,9 @@ var fbLoginSuccess = false
     @IBOutlet weak var myButton: UIButton!
   
     @IBAction func myButton(_ sender: UIButton) {
+        SVProgressHUD.show(withStatus: "Welcome Soldier")
         performSegue(withIdentifier: "a", sender: nil)
+        SVProgressHUD.dismiss(withDelay: 0.5)
     }
 @IBOutlet weak var loginButton: FBSDKLoginButton!
     override func viewDidLoad() {
