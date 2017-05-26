@@ -8,8 +8,9 @@
 
 import UIKit
 import SVProgressHUD
+import FBAudienceNetwork
 
-class DisplayViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate{
+class DisplayViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,FBAdViewDelegate{
 
    
     @IBOutlet weak var collectionView: UICollectionView!
@@ -17,13 +18,26 @@ class DisplayViewController: UIViewController,UICollectionViewDataSource,UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-
+    let adview = FBAdView(placementID: "1017748905026896_1032649793536807", adSize: kFBAdSize320x50, rootViewController: self)
+        adview.frame=CGRect(x: 40, y: 80, width:1000, height: 70)
+        adview.delegate = self
+        adview.loadAd()
+        view.addSubview(adview)
     
         // Do any additional setup after loading the view.
     }
     
-
+    func adViewDidClick(_ adView: FBAdView) {
+        print("ahai")
+    }
+    func adViewDidFinishHandlingClick(_ adView: FBAdView) {
+        print("aa")
+    }
+    
+    func adViewWillLogImpression(_ adView: FBAdView) {
+        print("aaa")
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        return menu.count
     }

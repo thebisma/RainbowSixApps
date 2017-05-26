@@ -9,4 +9,5 @@ pod 'FacebookShare'
 pod 'SVProgressHUD'
 pod 'TextFieldEffects'
 pod 'PermissionScope'
+pod 'FBAudienceNetwork'
 end
