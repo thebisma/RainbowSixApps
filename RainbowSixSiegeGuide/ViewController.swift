@@ -38,8 +38,6 @@ var fbLoginSuccess = false
         view.addSubview(loginButton)
         loginButton.readPermissions = ["public_profile", "email", "user_friends"]
        // PermissionScope
-        
-        
         pscope.addPermission(NotificationsPermission(notificationCategories: nil),
                              message: "Terima Kasih :)")
         pscope.show()

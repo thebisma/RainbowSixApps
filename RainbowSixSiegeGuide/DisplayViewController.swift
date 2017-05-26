@@ -11,6 +11,7 @@ import SVProgressHUD
 
 class DisplayViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate{
 
+   
     @IBOutlet weak var collectionView: UICollectionView!
     var menu = ["Army.jpg","Maps.jpg","r6.jpg","Reminder.jpg","About.jpg"]
     
@@ -18,8 +19,10 @@ class DisplayViewController: UIViewController,UICollectionViewDataSource,UIColle
         super.viewDidLoad()
     
 
+    
         // Do any additional setup after loading the view.
     }
+    
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        return menu.count
