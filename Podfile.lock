@@ -24,13 +24,17 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.22.0):
     - FBSDKCoreKit
+  - PermissionScope (1.1.1)
   - SVProgressHUD (2.1.2)
+  - TextFieldEffects (1.3.2)
 
 DEPENDENCIES:
   - FacebookCore
   - FacebookLogin
   - FacebookShare
+  - PermissionScope
   - SVProgressHUD
+  - TextFieldEffects
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -40,8 +44,10 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: c693bad19feb225469eeff14452ba364522ee48b
   FBSDKLoginKit: 1fa529fc622d7b32ebeaffbecd377180833c6d30
   FBSDKShareKit: 21ab3c8d173f4fa20c47c1061f3a9fac5950b5fa
+  PermissionScope: a30c16e015779ba27c97c124e7539e27b5829de2
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  TextFieldEffects: 9e5cce561ea39c75b86e9d3637601727a67e8b23
 
-PODFILE CHECKSUM: 408b76d4b6a2681e6ac48337691f636f84e1281e
+PODFILE CHECKSUM: 17aecef595b33e8ec9e50c4b14527f19083def82
 
 COCOAPODS: 1.2.1

@@ -10,6 +10,7 @@ import UIKit
 import FBSDKShareKit
 import FBSDKLoginKit
 import SVProgressHUD
+import PermissionScope
 //import FacebookCore
 //import FacebookLogin
 
@@ -17,7 +18,8 @@ import SVProgressHUD
 
 
 class ViewController: UIViewController ,FBSDKLoginButtonDelegate{
-
+let pscope = PermissionScope()
+    
 var fbLoginSuccess = false
     @IBOutlet weak var myButton: UIButton!
   
@@ -27,13 +29,20 @@ var fbLoginSuccess = false
         SVProgressHUD.dismiss(withDelay: 0.5)
     }
 @IBOutlet weak var loginButton: FBSDKLoginButton!
+    
+    
     override func viewDidLoad() {
         let loginButton = FBSDKLoginButton()
         //loginButton.center = view.center;
         loginButton.center = view.center
         view.addSubview(loginButton)
         loginButton.readPermissions = ["public_profile", "email", "user_friends"]
-       // let accessToken = AccessToken.current
+       // PermissionScope
+        
+        
+        pscope.addPermission(NotificationsPermission(notificationCategories: nil),
+                             message: "Terima Kasih :)")
+        pscope.show()
        
         
     }

@@ -7,5 +7,6 @@ pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
 pod 'SVProgressHUD'
-
+pod 'TextFieldEffects'
+pod 'PermissionScope'
 end
