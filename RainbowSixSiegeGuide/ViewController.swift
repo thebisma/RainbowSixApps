@@ -23,11 +23,7 @@ let pscope = PermissionScope()
 var fbLoginSuccess = false
     @IBOutlet weak var myButton: UIButton!
   
-    @IBAction func myButton(_ sender: UIButton) {
-        SVProgressHUD.show(withStatus: "Welcome Soldier")
-        performSegue(withIdentifier: "a", sender: nil)
-        SVProgressHUD.dismiss(withDelay: 0.5)
-    }
+
 @IBOutlet weak var loginButton: FBSDKLoginButton!
     
     
@@ -36,12 +32,17 @@ var fbLoginSuccess = false
         //loginButton.center = view.center;
         loginButton.center = view.center
         view.addSubview(loginButton)
+        loginButton.delegate = self
         loginButton.readPermissions = ["public_profile", "email", "user_friends"]
        // PermissionScope
         pscope.addPermission(NotificationsPermission(notificationCategories: nil),
                              message: "Terima Kasih :)")
         pscope.show()
-       
+        
+        if (FBSDKAccessToken.current() != nil)
+        {
+            performSegue(withIdentifier: "a", sender: self)
+        }
         
     }
     
