@@ -57,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" indicatorStyle="white" minimumZoomScale="2" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iXX-iU-aDc">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" red="0.9270445704460144" green="0.73739167281554396" blue="0.77648973806695631" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="YfA-S3-Cct">
                                     <size key="itemSize" width="90" height="90"/>
@@ -66,7 +66,7 @@
                                     <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BGmenu" id="fCL-jZ-MgW">
-                                    <rect key="frame" x="0.0" y="-64" width="320" height="504"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <cells>
@@ -123,6 +123,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFD-8b-Wvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1170" y="-583"/>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="IJF-LF-puu">
+            <objects>
+                <viewController storyboardIdentifier="PopUpId" id="5eN-rQ-U7X" customClass="PopUpViewController" customModule="RainbowSixSiegeGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X7C-Tk-PUT"/>
+                        <viewControllerLayoutGuide type="bottom" id="dPC-sl-YOY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KK6-Th-H91">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O28-S2-1rm">
+                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQ3-cR-pUH">
+                                        <rect key="frame" x="186" y="0.0" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="h8e-3X-t4p"/>
+                                        </constraints>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="popupClose:" destination="5eN-rQ-U7X" eventType="touchUpInside" id="jcj-Un-Q1B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89637305699481862" green="0.89637305699481862" blue="0.89637305699481862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="IQ3-cR-pUH" firstAttribute="top" secondItem="O28-S2-1rm" secondAttribute="top" id="qD2-Bg-Bxd"/>
+                                    <constraint firstItem="IQ3-cR-pUH" firstAttribute="trailing" secondItem="O28-S2-1rm" secondAttribute="trailingMargin" id="szd-Tw-amV"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingin Keluar Aplikasi?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nza-hi-VAf">
+                                <rect key="frame" x="40" y="252" width="240" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPH-G1-vUr">
+                                <rect key="frame" x="40" y="318" width="240" height="56"/>
+                                <state key="normal" title="Keluar"/>
+                                <connections>
+                                    <action selector="quitButton:" destination="5eN-rQ-U7X" eventType="touchUpInside" id="Zf5-95-i3b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SPH-G1-vUr" firstAttribute="trailing" secondItem="Nza-hi-VAf" secondAttribute="trailing" id="3i2-sQ-Gkg"/>
+                            <constraint firstItem="O28-S2-1rm" firstAttribute="leading" secondItem="KK6-Th-H91" secondAttribute="leadingMargin" constant="24" id="77i-bn-tgJ"/>
+                            <constraint firstItem="O28-S2-1rm" firstAttribute="centerX" secondItem="KK6-Th-H91" secondAttribute="centerX" id="BF8-cs-lYb"/>
+                            <constraint firstItem="Nza-hi-VAf" firstAttribute="top" secondItem="X7C-Tk-PUT" secondAttribute="bottom" constant="232" id="IHd-qb-Ikg"/>
+                            <constraint firstItem="SPH-G1-vUr" firstAttribute="leading" secondItem="Nza-hi-VAf" secondAttribute="leading" id="Kw4-dS-4Za"/>
+                            <constraint firstItem="SPH-G1-vUr" firstAttribute="top" secondItem="Nza-hi-VAf" secondAttribute="bottom" constant="45" id="LGj-zN-guM"/>
+                            <constraint firstItem="Nza-hi-VAf" firstAttribute="trailing" secondItem="O28-S2-1rm" secondAttribute="trailing" id="PCr-LK-jNh"/>
+                            <constraint firstItem="dPC-sl-YOY" firstAttribute="top" secondItem="SPH-G1-vUr" secondAttribute="bottom" constant="194" id="caF-Sx-o1g"/>
+                            <constraint firstItem="O28-S2-1rm" firstAttribute="top" secondItem="X7C-Tk-PUT" secondAttribute="bottom" constant="200" id="eFj-QS-hWC"/>
+                            <constraint firstItem="O28-S2-1rm" firstAttribute="centerY" secondItem="KK6-Th-H91" secondAttribute="centerY" id="sGS-ml-jpL"/>
+                            <constraint firstItem="Nza-hi-VAf" firstAttribute="leading" secondItem="O28-S2-1rm" secondAttribute="leading" id="uFd-SI-XqV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="logout" id="64U-am-ICV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KPT-7B-WJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1170" y="132.04225352112675"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="kSZ-GG-MuW">
@@ -271,4 +340,7 @@
         <image name="BGmenu" width="2880" height="5065"/>
         <image name="Background" width="1215" height="2137"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="64U-am-ICV"/>
+    </inferredMetricsTieBreakers>
 </document>

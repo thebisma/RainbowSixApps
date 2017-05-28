@@ -9,11 +9,13 @@
 import UIKit
 import SVProgressHUD
 import FBAudienceNetwork
+import FBSDKShareKit
+import FBSDKLoginKit
 import AVFoundation
 
-class DisplayViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,FBAdViewDelegate{
+class DisplayViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,/*FBSDKLoginButtonDelegate,*/FBAdViewDelegate{
 
-   var audioplayer = AVAudioPlayer()
+   //var audioplayer = AVAudioPlayer()
     @IBOutlet weak var collectionView: UICollectionView!
     var menu = ["Army.jpg","Maps.jpg","r6.jpg","Reminder.jpg","About.jpg","logout.jpg"]
     
@@ -79,9 +81,12 @@ class DisplayViewController: UIViewController,UICollectionViewDataSource,UIColle
             SVProgressHUD.show(withStatus: "Wait For it")
             performSegue(withIdentifier: "b", sender: self)
              SVProgressHUD.dismiss(withDelay: 1)
-            
-            
-            
+        case 5 :
+            let popup = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PopUpId") as! PopUpViewController
+            self.addChildViewController(popup)
+            popup.view.frame = self.view.frame
+            self.view.addSubview(popup.view)
+            popup.didMove(toParentViewController: self)
             
         default:
             break

@@ -20,8 +20,7 @@ import PermissionScope
 class ViewController: UIViewController ,FBSDKLoginButtonDelegate{
 let pscope = PermissionScope()
     
-var fbLoginSuccess = false
-    @IBOutlet weak var myButton: UIButton!
+
   
 
 @IBOutlet weak var loginButton: FBSDKLoginButton!
@@ -52,7 +51,7 @@ var fbLoginSuccess = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if (FBSDKAccessToken.current() != nil && fbLoginSuccess == true )
+        if (FBSDKAccessToken.current() != nil)
         {
             performSegue(withIdentifier: "a", sender: self)
         }
@@ -63,13 +62,12 @@ var fbLoginSuccess = false
         
         {
             print(error.localizedDescription)
-            fbLoginSuccess = true
+            
         }
       
         else
         {
-        fbLoginSuccess = true
-        
+         performSegue(withIdentifier: "a", sender: self)        
         }
         
     }
