@@ -13,21 +13,40 @@ import FBSDKShareKit
 import FBSDKLoginKit
 import AVFoundation
 
-class DisplayViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,/*FBSDKLoginButtonDelegate,*/FBAdViewDelegate{
-
-   //var audioplayer = AVAudioPlayer()
+class DisplayViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,FBAdViewDelegate{
+    var player:AVAudioPlayer = AVAudioPlayer()
     @IBOutlet weak var collectionView: UICollectionView!
     var menu = ["Army.jpg","Maps.jpg","r6.jpg","Reminder.jpg","About.jpg","logout.jpg"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //fbAd
     let adview = FBAdView(placementID: "1017748905026896_1032649793536807", adSize: kFBAdSize320x50, rootViewController: self)
         adview.frame=CGRect(x: 31, y: 80, width:900, height: 70)
         adview.delegate = self
         adview.loadAd()
         view.addSubview(adview)
     
-        // Do any additional setup after loading the view.
+        //BG sound
+        do
+        {
+            let audioPath = Bundle.main.path(forResource: "bgmusic2", ofType: "mp3")
+            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+        }
+        catch
+        {
+        }
+        
+        let session = AVAudioSession.sharedInstance()
+        do
+        {
+            try session.setCategory(AVAudioSessionCategoryPlayback)
+        }
+        catch
+        {
+        }
+        player.play()
     }
     
     func adViewDidClick(_ adView: FBAdView) {
@@ -63,30 +82,62 @@ class DisplayViewController: UIViewController,UICollectionViewDataSource,UIColle
         return cell
     }
     
+    func ButtonMusic()
+    {
+    
+        do
+        {
+            let audioPath = Bundle.main.path(forResource: "button-19", ofType: "mp3")
+            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+        }
+        catch
+        {
+        }
+        
+        let session = AVAudioSession.sharedInstance()
+        do
+        {
+            try session.setCategory(AVAudioSessionCategoryPlayback)
+        }
+        catch
+        {
+        }
+        player.play()
+    }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         
         switch(indexPath.row){
         case 0 :
-            
+            self.ButtonMusic()
             SVProgressHUD.show(withStatus: "Wait For it")
             performSegue(withIdentifier: "c", sender: self)
              SVProgressHUD.dismiss(withDelay: 1)
            
+    
         case 1 :
+            self.ButtonMusic()
             SVProgressHUD.show(withStatus: "Wait For it")
             performSegue(withIdentifier: "a", sender: self)
             SVProgressHUD.dismiss(withDelay: 1)
+            
+
         case 2 :
+            self.ButtonMusic()
             SVProgressHUD.show(withStatus: "Wait For it")
             performSegue(withIdentifier: "b", sender: self)
-             SVProgressHUD.dismiss(withDelay: 1)
+            SVProgressHUD.dismiss(withDelay: 1)
+            
+
         case 5 :
+            self.ButtonMusic()
             let popup = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PopUpId") as! PopUpViewController
             self.addChildViewController(popup)
             popup.view.frame = self.view.frame
             self.view.addSubview(popup.view)
             popup.didMove(toParentViewController: self)
+            
+
             
         default:
             break

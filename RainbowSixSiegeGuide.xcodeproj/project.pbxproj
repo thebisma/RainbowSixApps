@@ -11,6 +11,7 @@
 		4E014A151ED341BD00CB9197 /* MapsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E014A141ED341BD00CB9197 /* MapsTableViewController.swift */; };
 		4E014A211ED3508E00CB9197 /* FormMapsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E014A201ED3508E00CB9197 /* FormMapsTableViewCell.swift */; };
 		4E03655B1EDA9E9900498081 /* button-19.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E03655A1EDA9E9900498081 /* button-19.mp3 */; };
+		4E80AC7F1EDFE185001C8683 /* bgmusic2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E80AC7E1EDFE185001C8683 /* bgmusic2.mp3 */; };
 		4E9AF1001EDAFBB40008F387 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AF0FF1EDAFBB40008F387 /* PopUpViewController.swift */; };
 		4EE7493C1EBDFFF9001F214C /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7493B1EBDFFF9001F214C /* Cell.swift */; };
 		6A1486791EB4505A00AA5F0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1486781EB4505A00AA5F0B /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		4E014A141ED341BD00CB9197 /* MapsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsTableViewController.swift; sourceTree = "<group>"; };
 		4E014A201ED3508E00CB9197 /* FormMapsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormMapsTableViewCell.swift; path = ../FormMapsTableViewCell.swift; sourceTree = "<group>"; };
 		4E03655A1EDA9E9900498081 /* button-19.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "button-19.mp3"; path = "../../../Downloads/button-19.mp3"; sourceTree = "<group>"; };
+		4E80AC7E1EDFE185001C8683 /* bgmusic2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bgmusic2.mp3; path = ../../../Downloads/bgmusic2.mp3; sourceTree = "<group>"; };
 		4E9AF0FF1EDAFBB40008F387 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		4EE7493B1EBDFFF9001F214C /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		6A1486751EB4505A00AA5F0B /* RainbowSixSiegeGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainbowSixSiegeGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,7 @@
 				4E03655A1EDA9E9900498081 /* button-19.mp3 */,
 				6A6BC39B1EBD742C00ED0D32 /* DisplayViewController.swift */,
 				4E014A141ED341BD00CB9197 /* MapsTableViewController.swift */,
+				4E80AC7E1EDFE185001C8683 /* bgmusic2.mp3 */,
 				6A14867C1EB4505A00AA5F0B /* Main.storyboard */,
 				4E9AF0FF1EDAFBB40008F387 /* PopUpViewController.swift */,
 				4EE7493B1EBDFFF9001F214C /* Cell.swift */,
@@ -266,6 +269,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					6A1486881EB4505A00AA5F0B = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -308,6 +316,7 @@
 				6A1486801EB4505A00AA5F0B /* Assets.xcassets in Resources */,
 				4E03655B1EDA9E9900498081 /* button-19.mp3 in Resources */,
 				6A14867E1EB4505A00AA5F0B /* Main.storyboard in Resources */,
+				4E80AC7F1EDFE185001C8683 /* bgmusic2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
