@@ -8,10 +8,18 @@
 
 import UIKit
 import SVProgressHUD
+
+let imagedetail = ["bankmap.jpg","chaletmap.jpg","clubhousemap.jpg","consulatemap.jpg"]
+var myIndex = 0
 class MapsTableViewController: UITableViewController {
 
     let image = ["Bank.jpg","Chalet.jpg","Clubhouse.jpg","Consulate.jpg","Hereford.jpg","House.jpg","Cafe.jpg","Kanal.jpg","Oregon.jpg","Plane.jpg","Yacht.jpg","Border.jpg","Favela.jpg","Skyscraper.jpg","Bartlett.jpg","Coastline.jpg"]
+    
+   
     let data = ["Bank","Chalet","Club House","Consulate","Hereford Base","House","Kafe Dostoyevsky","Kanal","Oregon","Presidential Plane","Yacht","Border","Favela","SkyScraper","Bartlett University","Coastline"]
+    
+    
+    var imagemap = 0
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -43,7 +51,15 @@ class MapsTableViewController: UITableViewController {
         return cell
     }
     
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+       
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "map", sender: self)
+        
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

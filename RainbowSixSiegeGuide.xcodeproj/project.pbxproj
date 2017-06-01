@@ -13,6 +13,9 @@
 		4E03655B1EDA9E9900498081 /* button-19.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E03655A1EDA9E9900498081 /* button-19.mp3 */; };
 		4E80AC7F1EDFE185001C8683 /* bgmusic2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E80AC7E1EDFE185001C8683 /* bgmusic2.mp3 */; };
 		4E9AF1001EDAFBB40008F387 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AF0FF1EDAFBB40008F387 /* PopUpViewController.swift */; };
+		4EC30E251EE033D20017F1B3 /* MapdetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC30E241EE033D20017F1B3 /* MapdetailViewController.swift */; };
+		4EC30E2B1EE04DD30017F1B3 /* OperatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC30E2A1EE04DD30017F1B3 /* OperatorViewController.swift */; };
+		4EC30E311EE070880017F1B3 /* OPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC30E301EE070880017F1B3 /* OPTableViewCell.swift */; };
 		4EE7493C1EBDFFF9001F214C /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7493B1EBDFFF9001F214C /* Cell.swift */; };
 		6A1486791EB4505A00AA5F0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1486781EB4505A00AA5F0B /* AppDelegate.swift */; };
 		6A14867B1EB4505A00AA5F0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A14867A1EB4505A00AA5F0B /* ViewController.swift */; };
@@ -53,6 +56,9 @@
 		4E03655A1EDA9E9900498081 /* button-19.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "button-19.mp3"; path = "../../../Downloads/button-19.mp3"; sourceTree = "<group>"; };
 		4E80AC7E1EDFE185001C8683 /* bgmusic2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bgmusic2.mp3; path = ../../../Downloads/bgmusic2.mp3; sourceTree = "<group>"; };
 		4E9AF0FF1EDAFBB40008F387 /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		4EC30E241EE033D20017F1B3 /* MapdetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapdetailViewController.swift; sourceTree = "<group>"; };
+		4EC30E2A1EE04DD30017F1B3 /* OperatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorViewController.swift; sourceTree = "<group>"; };
+		4EC30E301EE070880017F1B3 /* OPTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPTableViewCell.swift; sourceTree = "<group>"; };
 		4EE7493B1EBDFFF9001F214C /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		6A1486751EB4505A00AA5F0B /* RainbowSixSiegeGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainbowSixSiegeGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A1486781EB4505A00AA5F0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +162,8 @@
 				4E014A141ED341BD00CB9197 /* MapsTableViewController.swift */,
 				4E80AC7E1EDFE185001C8683 /* bgmusic2.mp3 */,
 				6A14867C1EB4505A00AA5F0B /* Main.storyboard */,
+				4EC30E2A1EE04DD30017F1B3 /* OperatorViewController.swift */,
+				4EC30E241EE033D20017F1B3 /* MapdetailViewController.swift */,
 				4E9AF0FF1EDAFBB40008F387 /* PopUpViewController.swift */,
 				4EE7493B1EBDFFF9001F214C /* Cell.swift */,
 				6A14867F1EB4505A00AA5F0B /* Assets.xcassets */,
@@ -166,6 +174,7 @@
 				6A1486A81EB451D700AA5F0B /* FBSDKLoginKit.framework */,
 				6A1486A91EB451D700AA5F0B /* FBSDKShareKit.framework */,
 				6AF54F3E1EC6B7AE00EB4AD5 /* WebviewViewController.swift */,
+				4EC30E301EE070880017F1B3 /* OPTableViewCell.swift */,
 			);
 			path = RainbowSixSiegeGuide;
 			sourceTree = "<group>";
@@ -389,7 +398,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EC30E251EE033D20017F1B3 /* MapdetailViewController.swift in Sources */,
 				6A1486B11EB45F4600AA5F0B /* ViewController.m in Sources */,
+				4EC30E2B1EE04DD30017F1B3 /* OperatorViewController.swift in Sources */,
 				6A14867B1EB4505A00AA5F0B /* ViewController.swift in Sources */,
 				4EE7493C1EBDFFF9001F214C /* Cell.swift in Sources */,
 				4E014A151ED341BD00CB9197 /* MapsTableViewController.swift in Sources */,
@@ -397,6 +408,7 @@
 				6AF54F3F1EC6B7AE00EB4AD5 /* WebviewViewController.swift in Sources */,
 				4E014A211ED3508E00CB9197 /* FormMapsTableViewCell.swift in Sources */,
 				4E9AF1001EDAFBB40008F387 /* PopUpViewController.swift in Sources */,
+				4EC30E311EE070880017F1B3 /* OPTableViewCell.swift in Sources */,
 				6A6BC39C1EBD742C00ED0D32 /* DisplayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
