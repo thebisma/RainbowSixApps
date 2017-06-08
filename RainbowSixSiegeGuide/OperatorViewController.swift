@@ -14,7 +14,7 @@ class OperatorViewController: UIViewController ,UITableViewDataSource,UITableVie
     var expandedRows = Set<Int>()
     let operatorImage = ["ash.jpg","iq.jpg","montagne.jpg","bandit.jpg","tatcher.jpg"]
     
-    
+    let operatorname = ["ash","iq","montagne","bandit","tatcher"]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
@@ -33,13 +33,14 @@ class OperatorViewController: UIViewController ,UITableViewDataSource,UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:OPTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! OPTableViewCell
+        cell.myText.text = operatorname[indexPath.row]
         cell.myImages.image = UIImage(named: operatorImage[indexPath.row])
         cell.isExpanded = self.expandedRows.contains(indexPath.row)
         return cell
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200.0
+        return 300.0
     }
     // TableView Delegate methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
