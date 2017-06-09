@@ -78,7 +78,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehX-s5-tZz">
-                                                    <rect key="frame" x="4" y="6" width="86" height="84"/>
+                                                    <rect key="frame" x="2" y="3" width="86" height="84"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" red="0.99547426707767883" green="0.98728214537210257" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFD-8b-Wvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170" y="-583"/>
+            <point key="canvasLocation" x="1170" y="-583.09859154929575"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="IJF-LF-puu">
@@ -209,7 +209,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cGZ-x8-t9W">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cGZ-x8-t9W">
                                 <rect key="frame" x="0.0" y="66" width="320" height="502"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -234,8 +234,9 @@
                                     <segue destination="4lN-t5-nqU" kind="presentation" id="y1H-EO-npX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cl3-Pi-bwo">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cl3-Pi-bwo">
                                 <rect key="frame" x="0.0" y="28" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="iPQ-Zi-J6s" kind="presentation" modalTransitionStyle="coverVertical" id="xPe-KS-Sbm"/>
@@ -244,14 +245,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cGZ-x8-t9W" secondAttribute="trailing" id="3yR-En-FLZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wxG-em-J4u" secondAttribute="trailing" constant="17" id="6aj-XN-B6Y"/>
-                            <constraint firstItem="cGZ-x8-t9W" firstAttribute="leading" secondItem="Cl3-Pi-bwo" secondAttribute="leading" id="CqS-bj-iW2"/>
-                            <constraint firstAttribute="trailing" secondItem="cGZ-x8-t9W" secondAttribute="trailing" id="WJL-XX-Clg"/>
-                            <constraint firstItem="cGZ-x8-t9W" firstAttribute="leading" secondItem="phj-fz-D9C" secondAttribute="leading" id="ZYg-2R-lI8"/>
-                            <constraint firstItem="cGZ-x8-t9W" firstAttribute="top" secondItem="Cl3-Pi-bwo" secondAttribute="bottom" constant="8" symbolic="YES" id="c68-mu-Opu"/>
+                            <constraint firstItem="cGZ-x8-t9W" firstAttribute="bottom" secondItem="o93-Gn-wA2" secondAttribute="top" id="8Ch-4o-iTk"/>
+                            <constraint firstItem="cGZ-x8-t9W" firstAttribute="leading" secondItem="phj-fz-D9C" secondAttribute="leading" id="S0R-O4-GSb"/>
                             <constraint firstItem="wxG-em-J4u" firstAttribute="top" secondItem="N5s-ii-iba" secondAttribute="bottom" constant="17" id="psB-Ap-fIH"/>
-                            <constraint firstItem="cGZ-x8-t9W" firstAttribute="top" secondItem="wxG-em-J4u" secondAttribute="bottom" constant="7" id="z9I-qa-en8"/>
-                            <constraint firstItem="cGZ-x8-t9W" firstAttribute="bottom" secondItem="o93-Gn-wA2" secondAttribute="top" id="ztz-rr-ctN"/>
+                            <constraint firstItem="cGZ-x8-t9W" firstAttribute="top" secondItem="N5s-ii-iba" secondAttribute="bottom" constant="8" symbolic="YES" id="ytR-LM-t3g"/>
                         </constraints>
                     </view>
                     <connections>
@@ -549,13 +548,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0r-h5-gMG">
-                                <rect key="frame" x="16" y="518" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="rKe-ux-8rB" kind="show" id="FIi-jo-4HO"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vmt-gh-tE0">
                                 <rect key="frame" x="28" y="102" width="264" height="184"/>
                                 <constraints>
@@ -565,10 +557,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="K0r-h5-gMG" secondAttribute="bottom" constant="20" symbolic="YES" id="2mq-al-gWU"/>
                             <constraint firstItem="vmt-gh-tE0" firstAttribute="leading" secondItem="8MG-5E-UTK" secondAttribute="leadingMargin" constant="12" id="3AN-ZR-gHF"/>
                             <constraint firstItem="vmt-gh-tE0" firstAttribute="centerX" secondItem="8MG-5E-UTK" secondAttribute="centerX" id="Gud-0U-TNe"/>
-                            <constraint firstItem="K0r-h5-gMG" firstAttribute="leading" secondItem="8MG-5E-UTK" secondAttribute="leadingMargin" id="JtG-zy-NvQ"/>
                             <constraint firstItem="vmt-gh-tE0" firstAttribute="top" secondItem="y5R-qd-iQ4" secondAttribute="bottom" constant="82" id="tFe-wZ-5v9"/>
                         </constraints>
                     </view>
@@ -640,9 +630,8 @@
         <image name="Mute" width="960" height="1727"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="64U-am-ICV"/>
+        <segue reference="74K-KW-E96"/>
         <segue reference="X9y-Vv-o6P"/>
-        <segue reference="xPe-KS-Sbm"/>
-        <segue reference="IAE-9X-13f"/>
+        <segue reference="64U-am-ICV"/>
     </inferredMetricsTieBreakers>
 </document>

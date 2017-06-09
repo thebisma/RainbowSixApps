@@ -15,8 +15,7 @@ class ReminderViewController: UIViewController,UITableViewDelegate,UITableViewDa
     @IBOutlet weak var reminderTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+     reminderTableView.reloadData()        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
