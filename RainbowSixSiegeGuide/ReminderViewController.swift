@@ -7,7 +7,7 @@
 //
 
 import UIKit
-var reminder    = [""]
+var reminder    = ["Main jam 10 malam","Main hari minggu ranked match"]
 //var dateArray   = [""]
 class ReminderViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -25,14 +25,14 @@ class ReminderViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reminder.count
+        return (reminder.count)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let mycell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
         mycell.textLabel?.text = reminder[indexPath.row]
         //mycell.textLabel?.text =
             //dateArray[indexPath.row]
-        return mycell
+        return (mycell)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
@@ -44,6 +44,8 @@ class ReminderViewController: UIViewController,UITableViewDelegate,UITableViewDa
         }
     }
 
-
+    override func viewDidAppear(_ animated: Bool) {
+        reminderTableView.reloadData()
+    }
 }
 	
