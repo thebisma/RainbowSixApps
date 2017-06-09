@@ -81,6 +81,7 @@ class PopUpViewController: UIViewController,FBSDKLoginButtonDelegate {
     
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        ButtonMusic()
         performSegue(withIdentifier: "logout", sender: nil)
     }
 

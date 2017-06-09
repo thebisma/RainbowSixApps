@@ -23,7 +23,7 @@ class DisplayViewController: UIViewController,UICollectionViewDataSource,UIColle
         
         //fbAd
     let adview = FBAdView(placementID: "1017748905026896_1032649793536807", adSize: kFBAdSize320x50, rootViewController: self)
-        adview.frame=CGRect(x: 31, y: 80, width:900, height: 70)
+        adview.frame=CGRect(x: 28, y: 80, width:980, height: 70)
         adview.delegate = self
         adview.loadAd()
         view.addSubview(adview)
@@ -127,6 +127,21 @@ class DisplayViewController: UIViewController,UICollectionViewDataSource,UIColle
             SVProgressHUD.show(withStatus: "Wait For it")
             performSegue(withIdentifier: "b", sender: self)
             SVProgressHUD.dismiss(withDelay: 1)
+            
+            
+        case 3 :
+            self.ButtonMusic()
+            SVProgressHUD.show(withStatus: "Wait For it")
+            performSegue(withIdentifier: "d", sender: self)
+            SVProgressHUD.dismiss(withDelay: 1)
+            
+        case 4 :
+            self.ButtonMusic()
+            SVProgressHUD.show(withStatus: "Wait For it")
+            performSegue(withIdentifier: "info", sender: self)
+            SVProgressHUD.dismiss(withDelay: 1)
+            
+            
             
 
         case 5 :
